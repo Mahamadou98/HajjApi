@@ -1,0 +1,667 @@
+{
+	"info": {
+		"_postman_id": "903b1e7a-ef8b-4200-9d56-805d39e0cbfc",
+		"name": "hadjj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Agence",
+			"item": [
+				{
+					"name": "get all agence",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/agences/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"agences",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create agence",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Oumara da Tawwali Agence\",\r\n    \"imgCover\": \"img2.jpg\",\r\n    \"content\": \"Hello workd content is set for Dankoray\",\r\n    \"phone\": \"+22798433454\",\r\n    \"address\": \"Cite Casse \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/agences/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"agences",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get agence by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/agences/64178a9ab600dc1b1bcaaedd",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"agences",
+								"64178a9ab600dc1b1bcaaedd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update agence",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"name\": \"Hikima Law and Law\",\r\n            \"imgCover\": \"img1.jpg\",\r\n            \"content\": \"Hello workd content is set here\",\r\n            \"phone\": \"+2279re6\",\r\n            \"address\": \"Rond point Lazaret updated\",\r\n            \"createAt\": \"2023-03-19T22:20:05.123Z\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/agences/64178a9ab600dc1b1bcaaedd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"agences",
+								"64178a9ab600dc1b1bcaaedd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete agence",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/agences/64178a9ab600dc1b1bcaaedd",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"agences",
+								"64178a9ab600dc1b1bcaaedd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "get all client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/clients/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"clients",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Mahamadou Test\",\r\n    \"lastName\": \"Ismail\",\r\n    \"phone\": \"+227 75439847\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/clients/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"clients",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/clients/64183cb57d0f58f08b409dbe",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"clients",
+								"64183cb57d0f58f08b409dbe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update client",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Aboubacar updated\",\r\n    \"lastName\": \"Illo\",\r\n    \"phone\": \"+227 75439847\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/clients/64183d057d0f58f08b409dc1",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"clients",
+								"64183d057d0f58f08b409dc1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/clients/6418413f923c10a534c4070e",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"clients",
+								"6418413f923c10a534c4070e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "get All post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/posts/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Post 2 Title again\",\r\n    \"content\": \" Post 2 here also content\",\r\n    \"image\": \"img2.jpg\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/posts/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/posts/64184be4fe0eec97fc1b0a4d",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"posts",
+								"64184be4fe0eec97fc1b0a4d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Post 2 Title update\",\r\n    \"content\": \" Post 2 here also content also more more more content\",\r\n    \"image\": \"img2.jpg\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/posts/64184be4fe0eec97fc1b0a4d",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"posts",
+								"64184be4fe0eec97fc1b0a4d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/posts/6418506d8773cdbb39850e4c",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"posts",
+								"6418506d8773cdbb39850e4c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cours",
+			"item": [
+				{
+					"name": "get all cours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/cours/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"cours",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a cours",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\": \"test subject\",\r\n    \"title\": \"Lear to read in arabic language Tested\",\r\n    \"content\": \"Here is the cours  read in arabic content\",\r\n    \"url\": \"youtube.com/learn-arabic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/cours/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"cours",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/cours/64186437848615c22b8f2f19",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"cours",
+								"64186437848615c22b8f2f19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a cours",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"subject\": \"test subject updated\",\r\n            \"title\": \"Lear to read in arabic language Tested\",\r\n            \"content\": \"Here is the cours  read in arabic content\",\r\n            \"url\": \"youtube.com/learn-arabic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/cours/64186437848615c22b8f2f19",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"cours",
+								"64186437848615c22b8f2f19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cours",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/cours/64186437848615c22b8f2f19",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"cours",
+								"64186437848615c22b8f2f19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User auth",
+			"item": [
+				{
+					"name": "sign up",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mahamadou\",\r\n    \"email\": \"ahmed@gmail.com\",\r\n    \"password\": \"pass12345\",\r\n    \"passwordConfirm\": \"pass12345\",\r\n    \"passwordChangedAt\": \"2022-05-10\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/signup",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ahmed@gmail.com\",\r\n    \"password\": \"pass12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/login",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"it.mk2017@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/forgotPassword",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwt\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"passnew1234\",\r\n    \"passwordConfirm\": \"passnew1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/resetPassword/560879b3b73f74f5889ba0cc6d3af36aefb09a8f6ceef005061ec9e1f55b5212",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"resetPassword",
+								"560879b3b73f74f5889ba0cc6d3af36aefb09a8f6ceef005061ec9e1f55b5212"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
